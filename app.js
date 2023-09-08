@@ -1,9 +1,20 @@
 const loginInput = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form button");
+const loginForm = document.querySelector("#login-form");
 
-function onLoinBtn(){
-    const username = loginInput.value;
-    console.log(username);
+function onLoinSumbit(tomato){
+    tomato.preventDefault();
+    console.log(loginInput.value);
 }
 
-loginButton.addEventListener("click",onLoinBtn);
+loginForm.addEventListener("submit", onLoinSumbit);
+
+
+const link = document.querySelector("a");
+link.addEventListener("click", handleLinkClick);
+function handleLinkClick(event) {
+    event.preventDefault();
+    console.dir(event);
+    alert("click");
+}
+
+
