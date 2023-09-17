@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 .hidden {
     display: none;
@@ -28,6 +29,7 @@ img {
     width: 100%;
     margin-top: 100px;
     text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 #login-form {
