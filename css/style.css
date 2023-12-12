@@ -1,31 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
+body {
+    overflow: hidden;
+}
+
 .hidden {
     display: none;
 }
 
-img {
+section {}
+
+/* img {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
-}
+} */
 
 #z-index {
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 10;
-    color: white;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    width: 100vw;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: repeat(2, 48vh);
+    grid-template-columns: repeat(2, 400px);
 }
 
-#greeting{
+section {
+        text-align: center;
+    margin: 1vh 1vw;
+    border-radius: 50px;
+}
+
+#greeting {
     width: 100%;
     margin-top: 100px;
     text-align: center;
@@ -38,111 +48,259 @@ img {
     text-align: center;
 }
 
-    #login-form>input {
-        width: 250px;
-        height: 40px;
-        background-color: transparent;
-        border-width: 0 0 50px;
-        /* color: white; */
-        border-bottom: 2px solid #747474;
-        transition: all, 0.4s;
-        color: #ffffff;
-        font-size: 1rem;
-    }
+#login-form>input {
+    width: 250px;
+    height: 40px;
+    background-color: transparent;
+    border: 5px solid #747474;
+    border-radius: 10px;
+    transition: all, 0.4s;
+    color: #ffffff;
+    font-size: 1rem;
+}
 
-    input::placeholder {
-        color: white;
-    }
+#login-form>input::placeholder {
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Nanum Gothic', sans-serif;
+}
 
-    input:focus {
-        outline: none;
-    }
+input:focus {
+    outline: none;
+}
 
-    #login-form input:hover{
-        background-color: rgba(85, 85, 85, 0.8);
-    }
+#login-form input:hover {
+    background-color: rgba(85, 85, 85, 0.8);
+}
 
-    #login-form button{
-        width: 60px;
-        height: 50px;
-        color:#fff;
-        border:3px solid #747474;
-        background-color: transparent;
-        font-size: 0.8rem;
-        cursor: pointer;
-        transition: all, 0.4s;
-        border-radius:5px;
-    }
+#login-form button {
+    width: 60px;
+    height: 52px;
+    color: #fff;
+    border: 5px solid #747474;
+    background-color: transparent;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all, 0.4s;
+    border-radius: 10px;
+}
 
-    #login-form button:hover{
-            background-color: rgba(85, 85, 85, 0.8);
-        }
+#login-form button:hover {
+    background-color: rgba(85, 85, 85, 0.8);
+}
 
 #clock {
-    margin-top: 80px;
-    text-align: center;
-    font-size: 5rem;
+    position: absolute;
+    bottom: 0px;
+    right: 50px;
+    font-size: 1rem;
     font-family: 'Roboto Mono', monospace;
 }
 
-#quote {
-    margin: -50px 0px 50px 0px;
-    font-size: 0.8rem;
-}
-
-#todo-form{
-}
-
-    #todo-form input{
-        border-width: 0 0 5px;
-        border-bottom: 2px solid white;
-        color: white;
-        text-align: center;
-        background-color: transparent;
-        font-size:1rem;
-        width: 300px;
-        height: 40px;
-        margin-bottom:20px;
-        transition: all, 0.5s;
-    }
-
-
-    #todo-form input:focus{
-        outline:none;
-    }
-
-    #todo-form input:hover::-webkit-input-placeholder{ 
-        color: transparent;
-
-    }
-
-    
-#todo-list {
-    margin-top: -10px;
-}
-
-    #todo-list li{
-        list-style: none;
-        color:white;
-        font-size:1.2rem;
-        margin-bottom: -10px;
-    }
-
-    #todo-list button{
-        width: 30px;
-        height: 50px;
-        margin-left:10px;
-        border:none;
-        font-size:1.2rem;        
-        background-color: transparent;
-    }
-
-    #todo-list button:hover{
-        cursor: pointer;
-    }
-
-
 #weather {
+    position: absolute;
+    bottom: 0px;
+    font-size: 1rem;
+    right: 150px;
+}
+
+
+
+#todo-form {}
+
+#todo-form input {
+    border-width: 0 0 5px;
+    border-bottom: 2px solid white;
+    color: white;
+    text-align: center;
+    background-color: transparent;
+    font-size: 1rem;
+    width: 300px;
+    height: 40px;
+    margin-top: 10px;
+    transition: all, 0.5s;
+}
+
+#todo-form input:focus {
+    outline: none;
+}
+
+#todo-form input:hover::-webkit-input-placeholder {
+    color: transparent;
+}
+
+
+#todo-list {
+    margin-top: 0px;
+}
+
+#todo-list button {
+    width: 30px;
+    height: 50px;
+    margin-left: 10px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+#todo-list button:hover {
+    cursor: pointer;
+}
+
+
+:root {
+    --bg-color: #fff;
+    --font-color: rgba(0, 0, 0, 1);
+    --h2-color: rgba(0, 0, 0, 1);
+    --check-color: #749ed7;
+    --box01-color: rgba(244, 215, 207, 0.7);
+    --box02-color: rgba(227, 235, 184, 0.7);
+    --box03-color: rgba(236, 205, 134, 0.7);
+}
+
+.darkmode {
+    --bg-color: #575757;
+    --font-color: rgba(255, 255, 255, 1);
+    --h2-color: rgba(255, 255, 255, 1);
+    --check-color: #006cff;
+    --box01-color: rgba(162, 92, 70, 0.7);
+    --box02-color: rgba(147, 162, 61, 0.7);
+    --box03-color: rgba(196, 158, 70, 0.7);
+}
+
+body {
+    background: var(--bg-color);
+}
+
+p {
+    color: var(--font-color);
+}
+
+h2 {
+    color: var(--h2-color);
+}
+
+#box01 {
+    position: relative;
+    background-color: var(--box01-color);
+    grid-row: 1/3;
+}
+
+/* box02 */
+#box02 {
+    display: grid;
+    align-items: center;
+    background-color: var(--box02-color);
+}
+
+
+#quote {
+    margin: 0 2vw;
+    font-size: 1rem;
+}
+
+#box02 span {
+    margin-bottom: 20px;
+}
+
+#box03 {
+    background-color: var(--box03-color);
+}
+
+#todo-list li {
+    list-style: none;
+    color: var(--font-color);
+    font-size: 1rem;
+    margin-bottom: -20px;
+}
+
+#todo-form>input::placeholder {
+    color: var(--font-color);
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+.line6 {
     position: fixed;
-    top: 30px; right: 50px;
+    right: 30px;
+    bottom: 0;
+    z-index: 99;
+    margin: 25px 0px 0px 15px;
+}
+
+#dn {
+    display: none;
+}
+
+.toggle2 {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    right: 70px;
+    bottom: 20px;
+    margin-left: 75px;
+    width: 56px;
+    height: 32px;
+    background: #dfe2e3;
+    border-radius: 84px;
+    transition: background 200ms cubic-bezier(.445, .05, .55, .95);
+}
+
+.toggle2:before,
+.toggle2:after {
+    margin-top: 5px;
+}
+
+.toggle2:before {
+    /* content: "라이트모드"; */
+    position: absolute;
+    left: -85px;
+    color: #749ed7;
+}
+
+.toggle2:after {
+    /* content: "다크모드"; */
+    position: absolute;
+    right: -75px;
+}
+
+.toggle__handler {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    background: #ffe5b5;
+    background: #ffde7b;
+    border-color: #debd56;
+    box-shadow: none;
+    background-size: 0;
+    transition: transform .5s;
+    border: 0.188em solid #caba94;
+}
+
+#dn:checked+.toggle2 {
+    background: #dfe2e3
+}
+
+#dn:checked+.toggle2:before {
+    color: var(--font-color)
+}
+
+#dn:checked+.toggle2:after {
+    color: var(--check-color)
+}
+
+#dn:checked+.toggle2 .toggle__handler {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-block;
+    transform: translate3d(28px, 0, 0) rotate(0);
+    border: .188em solid #caba94;
+    background: #ffefb5;
+    box-shadow: inset -.15em -.15em #ffe096;
+    background-image: radial-gradient(circle at 60% 10%, #e6cea5 15%, transparent 0), radial-gradient(circle at 30% 50%, #e6cea5 10%, transparent 0), radial-gradient(circle at 60% 70%, #e6cea5 13%, transparent 0);
+    transition: transform .2s ease-in-out, background .3s, border-color .3s
 }
