@@ -4,48 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Momentum App</title>
+    <title>Javascript_zip</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
-<body>
-    <div id="z-index">
+<body><!-- clock -->
+    <h2 id="clock">00:00</h2>
 
-        <section id="box01">
-            <div>
-            <form id="login-form" class="hidden">
-                <input required maxlength="15" type="text" placeholder="이름을 입력해주세요.">
-                <button>로그인</button>
-            </form>
-            <h2 id="greeting" class="hidden"></h2>
-            <h2 id="weather">
-                <span></span>
-                <span></span>
-            </h2>
-            <h2 id="clock">00:00</h2>
-            </div>
-        </section>
+    <div class="navigation">
+        <button>login</button>
+        <button>Today's quote</button>
+        <button>Todo-List</button>
+        <button>Match Game</button>
 
-        <section id="box02">
-            <div>
-            <p id="quote">
-                <span></span><br/>
-                <span></span>
-            </p>
-            </div>
-        </section>
+        <!-- weather -->
+        <h2 id="weather">
+            <span></span>
+            <span></span>
+        </h2>
 
-        <section id="box03">
-            <div>
-            <form id="todo-form">
-                <p>Todo List</p>
-                <input type="text" placeholder="오늘은 어떤 하루가 되나요!" required>
-            </form>
-            <ul id="todo-list"></ul>
-            </div>
-        </section>
-
+        <!-- toggle -->
         <div class="line6">
             <input type="checkbox" id="dn">
             <label for="dn" class="toggle2">
@@ -53,15 +32,90 @@
                 </span>
             </label>
         </div>
-
     </div>
 
+    <svg>
+        <filter id="turbulence" x="-20%" y="-20%" width="140%" height="140%">
+            <feTurbulence baseFrequency="0" numOctaves="2" seed="1" id="feturbulence" type="fractalNoise"
+                result="NOISE">
+            </feTurbulence>
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="NOISE" scale="30">
+            </feDisplacementMap>
+        </filter>
+    </svg>
+
+    <div class="projects-scroll">
+        <div class="projects">
+
+            <!-- project1 -->
+            <div class="project">
+                <div class="project__content">
+                    <h2>LOGIN</h2>
+                    <section id="box01">
+                        <form id="login-form" class="hidden">
+                            <div>
+                            <input required maxlength="15" type="text" placeholder="이름을 입력해주세요.">
+                            <button class="btn_login">로그인</button>
+                            </div>
+                        </form>
+                        <h2 id="greeting" class="hidden"></h2>
+                    </section>
+                </div>
+            </div>
+            <!-- project2 todays quote-->
+            <div class="project">
+                <div class="project__content">
+                    <h2>Today's quote</h2>
+                    <section id="box02">
+                        <div>
+                            <p id="quote">
+                                <span></span><br />
+                                <span></span>
+                            </p>
+                            <button id="change_quote">새로운 명언 보기</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- project3 to_do_list -->
+            <div class="project">
+                <div class="project__content">
+                    <h2>Todo-List</h2>
+                    <section id="box03">
+                        <div>
+                            <form id="todo-form">
+                                <p>Todo List</p>
+                                <input type="text" placeholder="오늘은 어떤 하루가 되나요!" required>
+                            </form>
+                            <ul id="todo-list"></ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- project4 match_game-->
+            <div class="project">
+                <div class="project__content">
+                    <h2>Match Game</h2>
+                    <section id="box04">
+                    <div id="game-container"></div>
+                    </section>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js'></script>
     <script src="./js/greetings.js"></script>
     <script src="./js/clock.js"></script>
     <script src="./js/quotes.js"></script>
     <script src="./js/background.js"></script>
     <script src="./js/todo.js"></script>
     <script src="./js/weather.js"></script>
+    <script src="./js/gsap.js"></script>
+    <script src="./js/game.js"></script>
 </body>
 
 </html>
