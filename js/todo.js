@@ -56,3 +56,4 @@ if (savedTodos !== null) {
      toDos = parsedTodos;
      parsedTodos.forEach(paintTodo);
 }
+

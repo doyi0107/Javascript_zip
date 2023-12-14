@@ -401,8 +401,9 @@ ul#todo-list{
     align-items: center;
     font-size: 1.5em;
     cursor: pointer;
-    border: 1px solid #ccc;
-    background-color: #eee;
+    border-radius: 20px;
+    border: 1px solid rgba(71, 130, 142, 0.7);;
+    background-color: rgba(170, 233, 246, 0.7);
     transition: transform 0.3s ease;
 }
 
