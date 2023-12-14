@@ -318,6 +318,14 @@ input:focus {
     border-radius: 50px;
     background-color: var(--box03-color);
     filter: url(#turbulence);
+
+}
+
+ul#todo-list{
+    overflow: scroll;
+    height: 180px;
+    width: 300px;
+    margin: 0 auto;
 }
 
 #todo-list li {
@@ -368,7 +376,7 @@ input:focus {
 }
 
 
-/* game 카드 바뀔 때 뒤집히는 효과 줄지 고민 */
+/* game*/
 #box04 {
     filter: url(#turbulence);
     display: flex;
