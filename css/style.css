@@ -135,14 +135,14 @@ svg {
 :root {
     --bg01-color: rgba(255, 236, 232, 0.7);
     --bg02-color: rgba(249, 254, 221, 0.7);
-    --bg03-color: rgba(255, 236, 232, 0.7);
-    --bg04-color: rgba(255, 236, 232, 0.7);
+    --bg03-color: rgba(255, 249, 206, 0.7);
+    --bg04-color: rgba(232, 251, 255, 0.7);
     --font-color: rgba(0, 0, 0, 1);
     --h2-color: rgba(0, 0, 0, 1);
     --check-color: #749ed7;
     --box01-color: rgba(255, 203, 188, 1);
     --box02-color: rgba(227, 235, 184, 1);
-    --box03-color: rgba(236, 205, 134, 0.7);
+    --box03-color: rgba(244, 236, 184, 1);
 }
 
 .darkmode {
@@ -155,7 +155,7 @@ svg {
     --check-color: #006cff;
     --box01-color: rgb(170, 128, 116);
     --box02-color: rgba(137, 144, 96);
-    --box03-color: rgba(196, 158, 70, 0.7);
+    --box03-color: rgb(177, 157, 111);
 }
 
 /*  */
@@ -232,7 +232,7 @@ button {
 #login-form input::placeholder {
     color: var(--font-color);
     font-size: 0.8rem;
-    font-family: 'Nanum Gothic', sans-serif;
+font-family: 'GmarketSansMedium';
 }
 
 input:focus {
@@ -248,13 +248,12 @@ input:focus {
     height: 100px;
     color: var(--font-color);
     background-color: rgba(255, 236, 232, 0.7);
-    /* border: 3px solid rgba(255, 236, 232, 0.7); */
     border: none;
-    ;
     font-size: 0.8rem;
     cursor: pointer;
     transition: all, 0.4s;
     border-radius: 25px;
+    font-family: 'GmarketSansMedium';
 }
 
 #login-form button:hover {
@@ -291,7 +290,8 @@ input:focus {
 #change_quote {
     position: absolute;
     border-radius: 17px;
-    bottom: 10px; right: 0;
+    bottom: 10px;
+    right: 0;
     background-color: var(--bg02-color);
     width: 150px;
     height: 40px;
@@ -300,13 +300,17 @@ input:focus {
     margin-right: 50px;
 }
 
-#change_quote:hover{
+#change_quote:hover {
     cursor: pointer;
 }
 
 
 /* todobox */
 #box03 {
+    margin-top: 50px;
+    width: 50vw;
+    height: 300px;
+    border-radius: 50px;
     background-color: var(--box03-color);
     filter: url(#turbulence);
 }
@@ -315,16 +319,51 @@ input:focus {
     list-style: none;
     color: var(--font-color);
     font-size: 1rem;
-    margin-bottom: -20px;
+    margin:-10px 0 -25px;
+    font-family: 'GmarketSansMedium';
+}
+
+#todo-form input {
+    border-width: 0 0 5px;
+    border-bottom: 2px solid white;
+    color: var(--font-color);
+    text-align: center;
+    background-color: transparent;
+    font-size: 1rem;
+    width: 300px;
+    height: 40px;
+    margin-top: 50px;
+    transition: all, 0.5s;
+}
+
+#todo-form input:focus {
+    outline: none;
+}
+
+#todo-form input:hover::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#todo-list button {
+    width: 30px;
+    height: 50px;
+    margin-left: 10px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: transparent;
+}
+
+#todo-list button:hover {
+    cursor: pointer;
 }
 
 #todo-form>input::placeholder {
     color: var(--font-color);
-    font-family: 'Nanum Gothic', sans-serif;
+font-family: 'GmarketSansMedium';
 }
 
 
-/* game */
+/* game 카드 바뀔 때 뒤집히는 효과 줄지 고민 */
 #box04 {
     filter: url(#turbulence);
     display: flex;
@@ -351,7 +390,12 @@ input:focus {
     cursor: pointer;
     border: 1px solid #ccc;
     background-color: #eee;
+    transition: transform 0.3s ease;
 }
+
+ .card.flipped {
+     transform: rotateY(180deg);
+ }
 
 
 /* toggle */
