@@ -145,7 +145,7 @@ svg {
     --box03-color: rgba(244, 236, 184, 1);
     --login_btton-color: rgba(255, 236, 232, 0.7);
     --quote_btton-color: rgba(249, 254, 221, 0.7);
-}
+    --todo-form-input-color: rgba(0, 0, 0, 0.3);}
 
 .darkmode {
     --bg01-color: #575757;
@@ -158,8 +158,9 @@ svg {
     --box01-color: rgb(170, 128, 116);
     --box02-color: rgba(137, 144, 96);
     --box03-color: rgb(177, 157, 111);
-    --login_btton-color: rgba(105, 75, 66, 0.7);
+    --login_btton-color: rgba(145, 90, 75, 0.8);
     --quote_btton-color: rgb(109, 112, 90);
+    --todo-form-input-color:rgba(255, 255, 255, 0.5);
 }
 
 /*  */
@@ -338,7 +339,7 @@ ul#todo-list {
 
 #todo-form input {
     border-width: 0 0 5px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--todo-form-input-color);
     color: var(--font-color);
     text-align: center;
     background-color: transparent;
@@ -387,7 +388,7 @@ ul#todo-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 73vh;
     font-family: Arial, sans-serif;
 }
 
