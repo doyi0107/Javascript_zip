@@ -143,6 +143,8 @@ svg {
     --box01-color: rgba(255, 203, 188, 1);
     --box02-color: rgba(227, 235, 184, 1);
     --box03-color: rgba(244, 236, 184, 1);
+    --login_btton-color: rgba(255, 236, 232, 0.7);
+    --quote_btton-color: rgba(249, 254, 221, 0.7);
 }
 
 .darkmode {
@@ -156,6 +158,8 @@ svg {
     --box01-color: rgb(170, 128, 116);
     --box02-color: rgba(137, 144, 96);
     --box03-color: rgb(177, 157, 111);
+    --login_btton-color: rgba(105, 75, 66, 0.7);
+    --quote_btton-color: rgb(109, 112, 90);
 }
 
 /*  */
@@ -220,44 +224,45 @@ button {
 #login-form input {
     width: 300px;
     height: 100px;
-    background-color: rgba(255, 236, 232, 0.7);
+    background-color: var(--login_btton-color);
     border: none;
     border-radius: 30px;
     transition: all, 0.4s;
     color: var(--font-color);
-    font-size: 1rem;
+    /* font-size: 1rem; */
     padding-left: 10px;
 }
 
 #login-form input::placeholder {
     color: var(--font-color);
     font-size: 0.8rem;
-font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansMedium';
 }
 
 input:focus {
     outline: none;
 }
 
-#login-form input:hover {
-    background-color: rgba(255, 236, 232, 0.7);
+#login-form input::placeholder:hover {
+    font-size: 5rem;
 }
 
 #login-form button {
     width: 70px;
     height: 100px;
     color: var(--font-color);
-    background-color: rgba(255, 236, 232, 0.7);
+    background-color: var(--login_btton-color);
     border: none;
     font-size: 0.8rem;
     cursor: pointer;
     transition: all, 0.4s;
     border-radius: 25px;
     font-family: 'GmarketSansMedium';
+    transition: all 0.5s;
 }
 
 #login-form button:hover {
-    background-color: rgba(255, 236, 232, 0.7);
+    font-size: 1rem;
 }
 
 
@@ -292,7 +297,7 @@ input:focus {
     border-radius: 17px;
     bottom: 10px;
     right: 0;
-    background-color: var(--bg02-color);
+    background-color: var(--quote_btton-color);
     width: 150px;
     height: 40px;
     border: none;
@@ -319,7 +324,7 @@ input:focus {
     list-style: none;
     color: var(--font-color);
     font-size: 1rem;
-    margin:-10px 0 -25px;
+    margin: -10px 0 -25px;
     font-family: 'GmarketSansMedium';
 }
 
@@ -359,7 +364,7 @@ input:focus {
 
 #todo-form>input::placeholder {
     color: var(--font-color);
-font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansMedium';
 }
 
 
@@ -393,9 +398,9 @@ font-family: 'GmarketSansMedium';
     transition: transform 0.3s ease;
 }
 
- .card.flipped {
-     transform: rotateY(180deg);
- }
+.card.flipped {
+    transform: rotateY(180deg);
+}
 
 
 /* toggle */
