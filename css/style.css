@@ -302,7 +302,7 @@ input:focus {
     border: none;
     outline: none;
     margin-right: 50px;
-        font-family: 'GmarketSansMedium';
+    font-family: 'GmarketSansMedium';
 }
 
 #change_quote:hover {
@@ -321,7 +321,7 @@ input:focus {
 
 }
 
-ul#todo-list{
+ul#todo-list {
     overflow: scroll;
     height: 180px;
     width: 300px;
@@ -377,12 +377,17 @@ ul#todo-list{
 
 
 /* game*/
+
+.match_title {
+    margin-top: 35px;
+}
+
 #box04 {
     filter: url(#turbulence);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 70vh;
     font-family: Arial, sans-serif;
 }
 
@@ -402,7 +407,8 @@ ul#todo-list{
     font-size: 1.5em;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid rgba(71, 130, 142, 0.7);;
+    border: 1px solid rgba(71, 130, 142, 0.7);
+    ;
     background-color: rgba(170, 233, 246, 0.7);
     transition: transform 0.3s ease;
 }
